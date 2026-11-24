@@ -1,0 +1,254 @@
+
+/* ==============================
+   VARIÁVEIS DE CORES
+================================ */
+
+:root {
+    color-scheme: dark;
+
+    --bg: #101010;
+    --card: #191919;
+    --accent: #fdd213;
+    --text: #f6f6f6;
+    --muted: #b4b4b4;
+}
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', sans-serif;
+    line-height: 1.5;
+}
+
+.page {
+    width: min(100% - 32px, 650px);
+    margin: auto;
+    padding: 48px 0 20px;
+}
+
+/* ==============================
+   CABEÇALHO
+================================ */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+}
+
+h1 {
+    font-size: clamp(3.5rem, 12vw, 5.5rem);
+    letter-spacing: -0.075em;
+    line-height: 1;
+    margin: 16px 0;
+    font-weight: 900;
+}
+
+h1 .accent {
+    color: var(--accent);
+}
+
+h1 .dot {
+    color: var(--text);
+}
+
+header p,
+footer {
+    color: var(--muted);
+}
+
+h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 24px 0 14px;
+}
+
+/* ==============================
+   EQUIPE
+================================ */
+
+.team {
+    display: grid;
+    gap: 14px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    background: var(--card);
+    border: 1px solid #333;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: rgba(255, 233, 31, 0.15);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.person h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.person p {
+    margin: 2px 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* ==============================
+   REDES SOCIAIS
+================================ */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+
+    padding: 12px 16px;
+    min-width: 115px;
+    min-height: 45px;
+
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.85rem;
+
+    transition:
+        background 0.15s,
+        border-color 0.15s,
+        color 0.15s;
+}
+
+.social svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Efeito ao passar o mouse */
+
+.social:hover,
+.social:focus-visible {
+    background: rgba(255, 233, 31, 0.12);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.social:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* Links indisponíveis */
+
+.unavailable {
+    color: #aaa;
+    border-style: dashed;
+    opacity: 0.65;
+}
+
+/* ==============================
+   RODAPÉ
+================================ */
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 32px 0 12px;
+}
+
+/* ==============================
+   ACESSIBILIDADE
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+@media (max-width: 480px) {
+    .member {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .person {
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .person h3 {
+        font-size: 0.9rem;
+    }
+
+    .person p {
+        font-size: 0.7rem;
+    }
+
+    .social {
+        min-width: 44px;
+        padding: 10px;
+    }
+
+    .social span {
+        display: none;
+    }
+}
