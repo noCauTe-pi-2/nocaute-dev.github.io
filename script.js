@@ -22,8 +22,8 @@ const integrantes = [
         nome: 'Augustho Guilherme Gonçalves Silva',
         funcao: 'Equipe de desenvolvimento',
         foto: '',
-        rede: 'github',
-        link: ''
+        rede: 'linkedin',
+        link: 'https://www.linkedin.com/in/augustho-gon%C3%A7alves-373a4235a/'
     },
     {
         nome: 'Camylla Magalhães Sousa',
@@ -37,14 +37,14 @@ const integrantes = [
         funcao: 'Equipe de desenvolvimento',
         foto: '',
         rede: 'linkedin',
-        link: ''
+        link: 'https://www.linkedin.com/in/miguel-marcos-silva-97630426a/'
     },
     {
         nome: 'Vinícius Nascentes Nascimento',
         funcao: 'Equipe de desenvolvimento',
         foto: '',
-        rede: 'github',
-        link: ''
+        rede: 'linkedin',
+        link: 'https://www.linkedin.com/in/vin%C3%ADcius-nascentes-234aba446/'
     }
 ];
 
